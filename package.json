@@ -5,7 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
-    "deploy": "ng run giorgiofederici-frontend:deploy",
+    "ghp:build": "ng build --prod --output-path docs --base-href /giorgiofederici-frontend/",
+    "ghp:cp-index": "./node_modules/.bin/shx cp ./docs/index.html ./docs/404.html",
+    "ghp": "npm run ghp:build && npm run ghp:cp-index",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -61,6 +63,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "lite-server": "^2.5.3",
     "protractor": "~5.4.0",
+    "shx": "^0.3.2",
     "ts-node": "^8.3.0",
     "tslint": "~5.11.0",
     "typescript": "^3.5.3"
