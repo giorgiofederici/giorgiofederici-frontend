@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
-    "ghp:build": "ng build --prod --output-path docs --base-href /giorgiofederici-frontend/",
+    "ghp:build": "ng build --prod --output-path docs --base-href /giorgiofederici-frontend/ --source-map",
     "ghp:cp-index": "./node_modules/.bin/shx cp ./docs/index.html ./docs/404.html",
     "ghp": "npm run ghp:build && npm run ghp:cp-index",
     "test": "ng test",
@@ -64,6 +64,7 @@
     "lite-server": "^2.5.3",
     "protractor": "~5.4.0",
     "shx": "^0.3.2",
+    "source-map-explorer": "^2.0.1",
     "ts-node": "^8.3.0",
     "tslint": "~5.11.0",
     "typescript": "^3.5.3"
