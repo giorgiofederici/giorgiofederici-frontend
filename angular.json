@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/client/giorgiofederici-frontend",
+            "outputPath": "dist/giorgiofederici-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,7 +61,7 @@
             "it": {
               "aot": true,
               "baseHref": "/it/",
-              "outputPath": "dist/client/giorgiofederici-frontend-it",
+              "outputPath": "dist/giorgiofederici-frontend-it",
               "i18nFile": "src/i18n/messages.it.xlf",
               "i18nFormat": "xlf",
               "i18nLocale": "it"
@@ -122,14 +122,14 @@
       }
     },
     "giorgiofederici-frontend-e2e": {
-      "root": "client/e2e/",
+      "root": "e2e/",
       "projectType": "application",
       "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "client/e2e/protractor.conf.js",
+            "protractorConfig": "e2e/protractor.conf.js",
             "devServerTarget": "giorgiofederici-frontend:serve"
           },
           "configurations": {
@@ -141,7 +141,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "client/e2e/tsconfig.e2e.json",
+            "tsConfig": "e2e/tsconfig.e2e.json",
             "exclude": ["**/node_modules/**"]
           }
         }
