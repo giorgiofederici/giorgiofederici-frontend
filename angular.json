@@ -30,7 +30,7 @@
             "stylePreprocessorOptions": {
               "includePaths": ["src/scss/inc"]
             },
-            "scripts": ["node_modules/patternomaly/dist/patternomaly.js"],
+            "scripts": [],
             "es5BrowserSupport": true
           },
           "configurations": {
