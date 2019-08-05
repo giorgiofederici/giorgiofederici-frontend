@@ -1,0 +1,46 @@
+<div class="mt-4">
+    <form [formGroup]="form">
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <input id="firstName" type="text" class="form-control" placeholder="First name"
+                    formControlName="firstName">
+                <div class="alert alert-danger mt-2" *ngIf="firstNameRequired">
+                    <small>
+                        <fa-icon [icon]="['fa', 'exclamation']"></fa-icon> First name is required
+                    </small>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <input id="lastName" type="text" class="form-control" placeholder="Last name"
+                    formControlName="lastName">
+                <div class="alert alert-danger mt-2" *ngIf="lastNameRequired">
+                    <small>
+                        <fa-icon [icon]="['fa', 'exclamation']"></fa-icon> Last name is required
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-12 mb-3">
+                <input id="email" type="text" class="form-control" placeholder="Email" formControlName="email">
+                <div class="alert alert-danger mt-2" *ngIf="emailNotValid">
+                    <small>
+                        <fa-icon [icon]="['fa', 'exclamation']"></fa-icon> Not valid email
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-12 mb-3">
+                <textarea id="message" class="form-control" placeholder="Message" rows="10"
+                    formControlName="message"></textarea>
+                <div class="alert alert-danger mt-2" *ngIf="messageRequired">
+                    <small>
+                        <fa-icon [icon]="['fa', 'exclamation']"></fa-icon> Message is required
+                    </small>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-outline-light" (click)="sendMessage()">Send</button>
+    </form>
+</div>

@@ -1,0 +1,98 @@
+@import "fonts";
+
+@font-face {
+  font-family: $monoton-font-family-brand;
+  src: url($monoton-eot-font-path);
+  src: url($monoton-woff2-font-path) format("woff2"), url($monoton-woff-font-path) format("woff"),
+    url($monoton-ttf-font-path) format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $raleway-regular-font-family-brand;
+  src: url($raleway-regular-eot-font-path);
+  src: url($raleway-regular-woff2-font-path) format("woff2"), url($raleway-regular-woff-font-path) format("woff"),
+    url($raleway-regular-ttf-font-path) format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $raleway-bold-font-family-brand;
+  src: url($raleway-bold-eot-font-path);
+  src: url($raleway-bold-woff2-font-path) format("woff2"), url($raleway-bold-woff-font-path) format("woff"),
+    url($raleway-bold-ttf-font-path) format("ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.text-code {
+  font-family: $monoton-font-family-brand, cursive;
+}
+
+.text-aquamarine {
+  color: $acquamarine;
+}
+
+.text-ruby-red {
+  color: $ruby-red;
+}
+
+.text-dark-blue {
+  color: $dark-blue;
+}
+
+.text-dark-red {
+  color: $dark-red;
+}
+
+.text-new-moonlight {
+  color: $new-moonlight;
+}
+
+.text-moonlight {
+  color: $moonlight;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-shadow-red {
+  text-shadow: -2px 0 red, 0 2px red, 2px 0 red, 0 -2px red;
+}
+
+.text-green-low {
+  color: $green-low;
+}
+
+.text-orange {
+  color: $salmon;
+
+  a,
+  a:hover {
+    color: $salmon;
+  }
+}
+
+.text-pink {
+  color: $pink;
+}
+
+.text-09 {
+  font-size: 0.9rem;
+}
+
+.text-moonlight {
+  color: $moonlight;
+
+  a,
+  a:hover {
+    color: $moonlight;
+  }
+}

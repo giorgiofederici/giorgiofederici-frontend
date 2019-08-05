@@ -1,0 +1,23 @@
+.btn {
+  width: 100px;
+}
+
+.btn-light {
+  color: #fe5f75;
+  font-weight: 700;
+}
+
+.btn-outline-warning:hover {
+  color: $moonlight;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btn-outline-light {
+  border: 1px solid $white !important;
+}
+
+.btn-outline-light:hover {
+  color: #fe5f75;
+  font-weight: 700;
+}

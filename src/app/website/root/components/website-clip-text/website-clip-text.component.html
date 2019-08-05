@@ -1,0 +1,7 @@
+<div class="mb-0 text-container text-white text-code text-uppercase clip" #textContainer>
+    <span class="words-wrapper" #wordsWrapper>
+        <b *ngFor="let textLine of textLines; let i = index" [class.is-visible]="i === 0" id="text-line-{{ i }}" #htmlTextLines>
+            {{ textLine }}
+        </b>
+    </span>
+</div>

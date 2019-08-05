@@ -1,0 +1,16 @@
+@import 'variables';
+
+:host {
+  color: $white;
+}
+
+.cv-timeline-card {
+  background-color: transparent;
+}
+
+.graduation-cap-fix,
+.graduation-cap-fix::before {
+  height: 30px;
+  width: 30px;
+  font-size: 1.5rem;
+}

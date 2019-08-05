@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="it">
+    <body>
+      <trans-unit id="landingWelcome" datatype="html">
+        <source>
+            Welcome! My name is <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>Giorgio Federici<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>.
+        </source>
+        <target state="final">
+            Benvenuti! Mi chiamo <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>Giorgio Federici<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>.
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landing/components/landing-presentation/landing-presentation.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">The welcome message in landing page</note>
+        <note priority="1" from="meaning">landing welcome</note>
+      </trans-unit>
+      <trans-unit id="landingRoles" datatype="html">
+        <source>
+            I am a <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>computer science engineer<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>, <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>frontend<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> and <x id="START_TAG_SPAN_2" ctype="x-span" equiv-text="&lt;span>"/>backend<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+            developer, <x id="START_TAG_SPAN_3" ctype="x-span" equiv-text="&lt;span>"/>code teacher<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> and <x id="START_TAG_SPAN_4" ctype="x-span" equiv-text="&lt;span>"/>IT
+                coach<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>.</source>
+                <target state="final">
+            Sono un <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>ingegnere informatico<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>, sviluppatore <x id="START_TAG_SPAN_1" ctype="x-span" equiv-text="&lt;span>"/>frontend<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> e <x id="START_TAG_SPAN_2" ctype="x-span" equiv-text="&lt;span>"/>backend<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>
+            , <x id="START_TAG_SPAN_3" ctype="x-span" equiv-text="&lt;span>"/>insegnante di programmazione<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> e <x id="START_TAG_SPAN_4" ctype="x-span" equiv-text="&lt;span>"/>coach informatico<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/>.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landing/components/landing-presentation/landing-presentation.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">The roles in which I have working experience</note>
+        <note priority="1" from="meaning">landing roles</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,17 @@
+@import "variables";
+
+:host {
+  a {
+    color: $white;
+  }
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+}
+
+.rating {
+  p {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
