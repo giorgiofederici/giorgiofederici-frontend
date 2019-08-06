@@ -1,21 +1,25 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 // RxJS
 import { Observable, from, of, Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
-// Firebase
-import { AngularFireAuth } from 'angularfire2/auth';
+// Cookies
+// import { CookieService } from 'ngx-cookie-service';
+
+// Auth
+import { User } from '../../models/user.model';
 
 // Shared
-import { Credentials } from '../../models/user.model';
-import { User } from 'firebase';
+import { APIResponse } from '../../../../shared/models/api-response.model';
 
+// Env
+import { environment } from '../../../../../environments/environment';
 
 @Injectable()
 export class AuthService {
-
-    /*
+  /*
     // authState -> Observable
     // do -> create some side effect
     auth$ = this.af.authState.pipe(tap(next => {
@@ -34,41 +38,46 @@ export class AuthService {
     }));
     */
 
-    constructor(
-        private af: AngularFireAuth
-    ) { }
+  constructor(private httpClient: HttpClient) {}
 
-    get user() {
-        return this.af.auth.currentUser;
-    }
+  get user() {
+    return { email: 'test@test.com' };
+  }
 
-    get authState() {
-        return this.af.authState;
-    }
+  get authState() {
+    return { email: 'test@test.com' };
+  }
 
-    createUser(email: string, password: string) {
-        return this.af.auth.createUserWithEmailAndPassword(email, password);
-    }
+  createUser(email: string, password: string) {
+    return { email: 'test@test.com' };
+  }
 
-    /*
-    login(credentials: Credentials): Observable<any> {
+  login(user: User): Observable<APIResponse> {
+    // With credentials set to true will add response cookie
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      }),
+      withCredentials: true
+    };
+    return this.httpClient.post<APIResponse>(
+      `${environment.backendUrl}/api/v1/users/login`,
+      user,
+      httpOptions
+    );
+  }
 
-        const userCredentialSubj = new Subject<any>();
-        this.af.auth.signInWithEmailAndPassword(credentials.email, credentials.password)
-            .then((userCredential: firebase.auth.UserCredential) => {
-                userCredentialSubj.next(this.af.authState);
-            }).catch((error) => {
-                userCredentialSubj.error(error);
-            });
+  logout() {
+    return this.httpClient.get<APIResponse>(
+      `${environment.backendUrl}/api/v1/users/logout`,
+      { withCredentials: true }
+    );
+  }
 
-        return userCredentialSubj;
-    }*/
-
-    login(credentials: Credentials): Promise<any> {
-        return this.af.auth.signInWithEmailAndPassword(credentials.email, credentials.password);
-    }
-
-    logoutUser() {
-        return this.af.auth.signOut();
-    }
+  isLoggedIn(): Observable<APIResponse> {
+    return this.httpClient.get<APIResponse>(
+      `${environment.backendUrl}/api/v1/users/isLoggedIn`,
+      { withCredentials: true }
+    );
+  }
 }

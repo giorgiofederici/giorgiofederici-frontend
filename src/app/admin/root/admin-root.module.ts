@@ -17,37 +17,40 @@ import { AdminRootComponent } from './containers/admin-root/admin-root.component
 import { AdminHeaderComponent } from './components/admin-header/admin-header.component';
 import { AdminNavItemComponent } from './components/admin-nav-item/admin-nav-item.component';
 import { AdminSidebarComponent } from './components/admin-sidebar/admin-sidebar.component';
-
-
+import { AdminFooterComponent } from './components/admin-footer/admin-footer.component';
 
 export const ROUTES: Routes = [
-    {
-        path: '',
-        component: AdminRootComponent,
-        children: [
-            { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-            { path: 'dashboard', loadChildren: '../dashboard/dashboard.module#DashboardModule' }
-        ]
-    }
+  {
+    path: '',
+    component: AdminRootComponent,
+    children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      {
+        path: 'dashboard',
+        loadChildren: '../dashboard/dashboard.module#DashboardModule'
+      }
+    ]
+  }
 ];
 
 @NgModule({
-    imports: [
-        CommonModule,
-        RouterModule.forChild(ROUTES),
-        NgbCollapseModule,
-        FontAwesomeModule
-    ],
-    declarations: [
-        AdminRootComponent,
-        AdminHeaderComponent,
-        AdminNavItemComponent,
-        AdminSidebarComponent
-    ],
-    exports: [ ]
+  imports: [
+    CommonModule,
+    RouterModule.forChild(ROUTES),
+    NgbCollapseModule,
+    FontAwesomeModule
+  ],
+  declarations: [
+    AdminRootComponent,
+    AdminHeaderComponent,
+    AdminNavItemComponent,
+    AdminSidebarComponent,
+    AdminFooterComponent
+  ],
+  exports: []
 })
 export class AdminRootModule {
-    constructor() {
-        library.add(faBars);
-    }
+  constructor() {
+    library.add(faBars);
+  }
 }

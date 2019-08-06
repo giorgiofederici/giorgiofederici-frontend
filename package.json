@@ -36,11 +36,10 @@
     "@ngrx/store": "^8.2.0",
     "@ngrx/store-devtools": "^8.2.0",
     "@ngx-i18nsupport/tooling": "^8.0.3",
-    "angularfire2": "^5.2.1",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
-    "firebase": "^6.3.4",
     "ngrx-store-freeze": "^0.2.4",
+    "ngx-cookie-service": "^2.2.0",
     "rxjs": "~6.5.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
