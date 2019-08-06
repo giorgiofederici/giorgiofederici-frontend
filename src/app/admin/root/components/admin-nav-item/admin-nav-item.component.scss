@@ -1,0 +1,22 @@
+@import "variables";
+
+.nav-item:focus .nav-link,
+.nav-item:hover .nav-link,
+.nav-item .nav-link {
+  color: $white;
+  opacity: 0.8;
+  text-transform: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.nav-item .nav-link.active {
+  opacity: 1;
+  font-weight: 700;
+  color: $yellow;
+}
+
+.nav-item:hover .nav-link {
+  font-weight: 700;
+  opacity: 1;
+}

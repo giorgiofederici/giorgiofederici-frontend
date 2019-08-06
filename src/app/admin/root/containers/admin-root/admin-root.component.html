@@ -1,12 +1,23 @@
-<admin-header
-  [user]="user$ | async"
-  [loggedIn]="loggedIn$ | async"
-  (logout)="onLogout()"
->
-</admin-header>
-<admin-sidebar> </admin-sidebar>
-<div class="bg-white">
-  <router-outlet></router-outlet>
+<div class="admin-header">
+  <admin-header
+    [user]="user$ | async"
+    [loggedIn]="loggedIn$ | async"
+    (logout)="onLogout()"
+  >
+  </admin-header>
 </div>
 
+<div>
+  <div class="row">
+    <div class="col-sm-3 col-md-2 d-none d-md-block bg-new-moonlight sidebar">
+      <admin-sidebar></admin-sidebar>
+    </div>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 bg-white">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
+
+<!--
 <admin-footer> </admin-footer>
+-->

@@ -28,6 +28,10 @@ export const ROUTES: Routes = [
       {
         path: 'dashboard',
         loadChildren: '../dashboard/dashboard.module#DashboardModule'
+      },
+      {
+        path: 'skills',
+        loadChildren: '../skills/skills.module#SkillsModule'
       }
     ]
   }

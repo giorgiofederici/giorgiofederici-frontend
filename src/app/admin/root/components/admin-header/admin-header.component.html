@@ -3,8 +3,12 @@
 >
   <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Administration</a>
 
-  <ul class="navbar-nav px-3">
-    <admin-nav-item (navigate)="onLogout()" *ngIf="loggedIn">
+  <ul class="navbar-nav px-3 disable-active">
+    <admin-nav-item
+      (navigate)="onLogout()"
+      *ngIf="loggedIn"
+      [disableActive]="true"
+    >
       Sign out
     </admin-nav-item>
   </ul>
