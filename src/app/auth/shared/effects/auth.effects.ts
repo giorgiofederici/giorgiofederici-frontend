@@ -4,9 +4,11 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
 // RxJs
-import { Actions, Effect, ofType } from '@ngrx/effects';
-import { of, from } from 'rxjs';
+import { of } from 'rxjs';
 import { catchError, exhaustMap, map, tap, switchMap } from 'rxjs/operators';
+
+// ngRx
+import { Actions, Effect, ofType } from '@ngrx/effects';
 
 // Material
 import { MatDialog } from '@angular/material';

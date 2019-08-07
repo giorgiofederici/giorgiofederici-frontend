@@ -4,31 +4,18 @@ import { Injectable } from '@angular/core';
 // RxJS
 import { Store, select } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
-import {
-  map,
-  take,
-  delay,
-  tap,
-  filter,
-  switchMap,
-  catchError
-} from 'rxjs/operators';
+import { take, tap, filter, switchMap, catchError } from 'rxjs/operators';
 
 // Auth shared
 import * as fromAuth from '../reducers';
-import { LoginActions, UserActions } from '../actions';
+import { UserActions } from '../actions';
 import { User } from '../models/user.model';
-import { AuthService } from '../../shared/services/auth/auth.service';
-import { debug } from 'util';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
   user$: Observable<User>;
 
-  constructor(
-    private store: Store<fromAuth.State>,
-    private authService: AuthService
-  ) {}
+  constructor(private store: Store<fromAuth.State>) {}
 
   // wrapping the logic so we can .switchMap it
   getFromStoreOrCookies(): Observable<any> {

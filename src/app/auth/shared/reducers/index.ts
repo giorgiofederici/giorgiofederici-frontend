@@ -35,10 +35,12 @@ export const selectAuthStatusState = createSelector(
   selectAuthState,
   (state: AuthState) => state.status
 );
+
 export const getUser = createSelector(
   selectAuthStatusState,
   fromAuth.getUser
 );
+
 export const getLoggedIn = createSelector(
   getUser,
   user => !!user
@@ -48,10 +50,12 @@ export const selectLoginState = createSelector(
   selectAuthState,
   (state: AuthState) => state.login
 );
+
 export const getLoginError = createSelector(
   selectLoginState,
   fromLogin.getError
 );
+
 export const getLoginPending = createSelector(
   selectLoginState,
   fromLogin.getPending
