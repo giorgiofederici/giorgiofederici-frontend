@@ -4,7 +4,7 @@
       <fa-icon [icon]="['far', 'star']" class="text-ruby-red mr-2"></fa-icon>
       Skills
     </h1>
-    <a class="btn__add" [routerLink]="['../skills/new']">
+    <a class="btn__add" [routerLink]="['../new']">
       <img src="assets//images/add-white.svg" />
       New skill
     </a>
@@ -17,7 +17,7 @@
     <admin-list-item
       *ngFor="let skill of skills"
       [item]="skill"
-      (remove)="removeMeal($event)"
+      (remove)="removeSkill($event)"
     >
     </admin-list-item>
   </div>

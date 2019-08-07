@@ -1,11 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-
-// ngRx
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
 
 // Font Awesome
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -14,18 +10,24 @@ import { faStar } from '@fortawesome/free-regular-svg-icons';
 
 // Components
 import { SkillsComponent } from './containers/skills/skills.component';
-
-// Reducers
-import { skillsReducer } from './reducers/skills.reducer';
-
-// Effects
-import { SkillsEffects } from './effects/skills.effects';
+import { SkillComponent } from './containers/skill/skill.component';
+import { SkillFormComponent } from './components/skill-form/skill-form.component';
 
 // Shared
 import { SharedModule } from '../shared/shared.module';
-import { SkillsService } from './services/skills.service';
+import { SkillResolver } from '../shared/resolvers/skills/skill.resolver';
 
-export const ROUTES: Routes = [{ path: '', component: SkillsComponent }];
+export const ROUTES: Routes = [
+  { path: '', component: SkillsComponent },
+  { path: 'new', component: SkillComponent },
+  {
+    path: ':id',
+    resolve: {
+      skill: SkillResolver
+    },
+    component: SkillComponent
+  }
+];
 
 @NgModule({
   imports: [
@@ -33,12 +35,10 @@ export const ROUTES: Routes = [{ path: '', component: SkillsComponent }];
     ReactiveFormsModule,
     RouterModule.forChild(ROUTES),
     FontAwesomeModule,
-    StoreModule.forFeature('skills', skillsReducer),
-    EffectsModule.forFeature([SkillsEffects]),
-    SharedModule
+    SharedModule.forRoot()
   ],
-  declarations: [SkillsComponent],
-  providers: [SkillsService]
+  declarations: [SkillsComponent, SkillComponent, SkillFormComponent],
+  providers: []
 })
 export class SkillsModule {
   constructor() {

@@ -1,0 +1,28 @@
+<div class="skill">
+  <div class="skill__title">
+    <h1>
+      <fa-icon [icon]="['far', 'star']" class="text-ruby-red mr-2"></fa-icon>
+      <span *ngIf="skill; else title">
+        {{ skill.name ? 'Edit' : 'Create' }} skill
+      </span>
+      <ng-template #title>
+        Loading...
+      </ng-template>
+    </h1>
+  </div>
+  <div *ngIf="skill; else loading">
+    <admin-skill-form
+      [skill]="skill"
+      (create)="addSkill($event)"
+      (update)="updateSkill($event)"
+      (remove)="removeSkill($event)"
+    >
+    </admin-skill-form>
+  </div>
+  <ng-template #loading>
+    <div class="message">
+      <img src="assets/images/loading.svg" />
+      Fetching skill...
+    </div>
+  </ng-template>
+</div>

@@ -10,7 +10,7 @@ import {
 import { FormBuilder, Validators } from '@angular/forms';
 
 // Shared
-import { Skill } from '../../models/skill.model';
+import { Skill } from '../../../shared/models/skills/skill.model';
 
 @Component({
   selector: 'admin-skill-form',

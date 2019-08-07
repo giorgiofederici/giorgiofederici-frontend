@@ -7,13 +7,13 @@ import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 
 // Reducers
-import * as fromSkills from '../../reducers/skills.reducer';
+import * as fromSkills from '../../../shared/reducers/skills/skills.reducer';
 
 // Actions
-import { SkillsActions } from '../../actions';
+import { SkillsActions } from '../../../shared/actions/skills';
 
 // Shared
-import { Skill } from '../../models/skill.model';
+import { Skill } from '../../../shared/models/skills/skill.model';
 
 @Component({
   selector: 'admin-skills',
@@ -33,5 +33,9 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit() {
     this.store.dispatch(new SkillsActions.GetAllSkills());
+  }
+
+  removeSkill(event: Skill) {
+    this.store.dispatch(new SkillsActions.DeleteSkill({ skillId: event._id }));
   }
 }

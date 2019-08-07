@@ -1,50 +1,83 @@
 <div class="row py-4">
-    <div class="col cv-shadow p-0">
-        <div class="container">
-            <div class="row h-100">
-                <div class="col-md-4 p-4 bg-moonlight border-left-cyan">
-                    <h3 class="text-white text-center">Giorgio Federici</h3>
-                    <img class="img-thumbnail bg-new-moonlight border-cyan mt-3" src="assets/images/giorgiofederici.png"
-                        alt="Giorgio Federici's picture">
-                    <div class="text-white">
-                        <p class="mt-3">City: <strong>Rome (RM)</strong></p>
-                        <p>Country: <strong>Italy</strong></p>
-                        <p>Nationality: <strong>Italian</strong></p>
-                        <p>Date of birth: <strong>12 Jun 1986</strong></p>
-                        <hr class="border-cyan">
-                        <h5 class="bg-new-moonlight p-2">Languages</h5>
-                        <p><strong>Italian</strong> (Native proficiency)</p>
-                        <p><strong>English</strong> (Professional working proficiency)</p>
-                        <hr class="border-cyan">
-                        <h5 class="bg-new-moonlight p-2">Profiles</h5>
-                        <div class="mt-4 ml-2">
-                            <a class="text-white mr-3" href="https://www.linkedin.com/in/giorgiofederici/"
-                                title="Contact me on LinkedIn!" target="_blank">
-                                <fa-icon [icon]="['fab', 'linkedin']" transform="grow-20"></fa-icon>
-                            </a>
-                            <a class="text-white mx-3" href="https://twitter.com/TheMonkey86/"
-                                title="Follow me on Twitter!" target="_blank">
-                                <fa-icon [icon]="['fab', 'twitter']" transform="grow-20"></fa-icon>
-                            </a>
-                            <a class="text-white mx-3" href="https://github.com/giorgiofederici/"
-                                title="Follow me on GitHub!" target="_blank">
-                                <fa-icon [icon]="['fab', 'github']" transform="grow-20"></fa-icon>
-                            </a>
-                            <a class="text-white mx-3" href="https://www.instagram.com/thecatandtheengineer/"
-                                title="Follow me on Instagram!" target="_blank">
-                                <fa-icon [icon]="['fab', 'instagram']" transform="grow-20"></fa-icon>
-                            </a>
-                        </div>
-                        <hr class="border-cyan">
-                        <h5 class="bg-new-moonlight mt-3 p-2">IT Skills</h5>
-                        <!-- Skills -->
-                        <website-cv-skills></website-cv-skills>
-                    </div>
-                </div>
-                <div class="col-md-8 p-4 bg-new-moonlight border-right-cyan">
-                    <website-cv-timeline></website-cv-timeline>
-                </div>
+  <div class="col cv-shadow p-0">
+    <div class="container">
+      <div class="row h-100">
+        <div class="col-md-4 p-4 bg-moonlight border-left-cyan">
+          <h3 class="text-white text-center">Giorgio Federici</h3>
+          <img
+            class="img-thumbnail bg-new-moonlight border-cyan mt-3"
+            src="assets/images/giorgiofederici.png"
+            alt="Giorgio Federici's picture"
+          />
+          <div class="text-white">
+            <p class="mt-3">City: <strong>Rome (RM)</strong></p>
+            <p>Country: <strong>Italy</strong></p>
+            <p>Nationality: <strong>Italian</strong></p>
+            <p>Date of birth: <strong>12 Jun 1986</strong></p>
+            <hr class="border-cyan" />
+            <h5 class="bg-new-moonlight p-2">Languages</h5>
+            <p><strong>Italian</strong> (Native proficiency)</p>
+            <p><strong>English</strong> (Professional working proficiency)</p>
+            <hr class="border-cyan" />
+            <h5 class="bg-new-moonlight p-2">Profiles</h5>
+            <div class="mt-4 ml-2">
+              <a
+                class="text-white mr-3"
+                href="https://www.linkedin.com/in/giorgiofederici/"
+                title="Contact me on LinkedIn!"
+                target="_blank"
+              >
+                <fa-icon
+                  [icon]="['fab', 'linkedin']"
+                  transform="grow-20"
+                ></fa-icon>
+              </a>
+              <a
+                class="text-white mx-3"
+                href="https://twitter.com/TheMonkey86/"
+                title="Follow me on Twitter!"
+                target="_blank"
+              >
+                <fa-icon
+                  [icon]="['fab', 'twitter']"
+                  transform="grow-20"
+                ></fa-icon>
+              </a>
+              <a
+                class="text-white mx-3"
+                href="https://github.com/giorgiofederici/"
+                title="Follow me on GitHub!"
+                target="_blank"
+              >
+                <fa-icon
+                  [icon]="['fab', 'github']"
+                  transform="grow-20"
+                ></fa-icon>
+              </a>
+              <a
+                class="text-white mx-3"
+                href="https://www.instagram.com/thecatandtheengineer/"
+                title="Follow me on Instagram!"
+                target="_blank"
+              >
+                <fa-icon
+                  [icon]="['fab', 'instagram']"
+                  transform="grow-20"
+                ></fa-icon>
+              </a>
             </div>
+            <hr class="border-cyan" />
+            <h5 class="bg-new-moonlight mt-3 p-2">IT Skills</h5>
+            <!-- Skills -->
+            <ng-container *ngIf="skills$ | async as skills">
+              <website-cv-skills [skills]="skills"></website-cv-skills>
+            </ng-container>
+          </div>
         </div>
+        <div class="col-md-8 p-4 bg-new-moonlight border-right-cyan">
+          <website-cv-timeline></website-cv-timeline>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

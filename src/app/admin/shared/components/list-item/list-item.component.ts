@@ -48,6 +48,6 @@ export class ListItemComponent {
   }
 
   getRoute(item: any) {
-    return [`../skills`, item._id];
+    return [`../`, item._id];
   }
 }

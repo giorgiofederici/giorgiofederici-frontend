@@ -27,6 +27,7 @@ import { NodeJSComponent } from './components/nodejs/nodejs.component';
 
 // Shared
 import { SharedModule } from '../shared/shared.module';
+import { SharedModule as AdminSharedModule } from '../../admin/shared/shared.module';
 
 export const ROUTES: Routes = [
   { path: '', component: CVComponent },
@@ -38,7 +39,8 @@ export const ROUTES: Routes = [
     CommonModule,
     RouterModule.forChild(ROUTES),
     FontAwesomeModule,
-    SharedModule
+    SharedModule,
+    AdminSharedModule.forRoot()
   ],
   declarations: [
     CVComponent,
