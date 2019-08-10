@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+  - '11'
+branches:
+  only:
+    - production
+before_script:
+  - npm install -g @angular/cli
+script:
+  - npm install
+  - npm run build
+cache:
+  directories:
+    - node_modules
+addons:
+  ssh_known_hosts: 116.203.146.153
+before_install:
+  - openssl aes-256-cbc -K $encrypted_383bc2ea2d21_key -iv $encrypted_383bc2ea2d21_iv -in deploy_fe_rsa.enc -out deploy_fe_rsa -d
+  - eval "$(ssh-agent -s)"
+  - cp deploy_fe_rsa ~/.ssh/deploy_fe_rsa
+  - chmod 600 ~/.ssh/deploy_fe_rsa
+  - ssh-add ~/.ssh/deploy_fe_rsa
+before_deploy:
+  - npm run build
+deploy:
+  - provider: script
+    script: chmod +x deploy.sh && sh ./deploy.sh
+    skip_cleanup: true
+    on:
+      branch: production

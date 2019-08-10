@@ -8,17 +8,27 @@ The SPA is created with Angular2+ (v.8) framework.
 
 Inspired by Redux, there is central store and a reactive state management.
 
-The SPA is hosted on a Debian 9 VM in the [Hetzner Cloud](https://www.hetzner.com/cloud).
+The SPA is hosted using Nginx on a Debian 9 VM in the [Hetzner Cloud](https://www.hetzner.com/cloud).
+
+An [API server](https://github.com/giorgiofederici/giorgiofederici-backend) supports all the http requests.
 
 # CI/CD (Continuous integration/Continuous deployment)
 
 The CI/CD works with [Travis CI](https://travis-ci.org/).
+
+As custom VPSs are not supported by Travis CI providers, a custom deploy has been created with the 'script' provider and SSH connections.
+
+For details, check the .travis.yml and deploy.sh files.
 
 # SSL
 
 HTTPS enabled thanks to [Let's Encrypt](https://letsencrypt.org/) certificate.
 
 # Scripts
+
+    start: it launches a development build and start a selfhosted server to serve the web app
+    build: it launches the production ready build
+    lite-server:local: it launches a tiny server to serve the production ready distribution
 
 # Technologies
 
