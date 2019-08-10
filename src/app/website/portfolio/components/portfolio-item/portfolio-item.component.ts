@@ -1,24 +1,15 @@
 import { Component, Input } from '@angular/core';
 
-
 @Component({
-    selector: 'website-portfolio-item',
-    templateUrl: './portfolio-item.component.html',
-    styleUrls: ['./portfolio-item.component.scss']
+  selector: 'website-portfolio-item',
+  templateUrl: './portfolio-item.component.html',
+  styleUrls: ['./portfolio-item.component.scss']
 })
 export class PortfolioItemComponent {
+  @Input() image: string;
+  @Input() name: string;
+  @Input() description: string;
+  @Input() repository: string;
 
-    @Input()
-    portfolioItemImgUrl: string;
-
-    @Input()
-    portfolioItemTitle: string;
-
-    @Input()
-    portfolioItemText: string;
-
-    constructor() {
-
-    }
-
+  constructor() {}
 }

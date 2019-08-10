@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 // Routing
 import { RouterModule, Routes } from '@angular/router';
@@ -7,17 +8,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { PortfolioComponent } from './containers/portfolio/portfolio.component';
 import { PortfolioItemComponent } from './components/portfolio-item/portfolio-item.component';
 
-export const ROUTES: Routes = [
-    { path: '', component: PortfolioComponent }
-];
+// Shared
+import { SharedModule as AdminSharedModule } from '../../admin/shared/shared.module';
+
+export const ROUTES: Routes = [{ path: '', component: PortfolioComponent }];
 
 @NgModule({
-    imports: [
-        RouterModule.forChild(ROUTES)
-    ],
-    declarations: [
-        PortfolioComponent,
-        PortfolioItemComponent
-    ]
+  imports: [
+    CommonModule,
+    RouterModule.forChild(ROUTES),
+    AdminSharedModule.forRoot()
+  ],
+  declarations: [PortfolioComponent, PortfolioItemComponent]
 })
-export class PortfolioModule { }
+export class PortfolioModule {}
