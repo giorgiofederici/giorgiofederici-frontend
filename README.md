@@ -6,7 +6,7 @@ A Single Page Application (SPA) developed as the web application frontend.
 
 The SPA is created with Angular2+ (v.8) framework.
 
-Inspired by Redux, there is central store and a reactive state management.
+Inspired by Redux, there is central store and a reactive state management (NgRx and RxJs).
 
 The SPA is hosted using Nginx on a Debian 9 VM in the [Hetzner Cloud](https://www.hetzner.com/cloud).
 
