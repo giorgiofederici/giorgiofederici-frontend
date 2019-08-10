@@ -1,12 +1,13 @@
 import { baseEnv } from './environment.base';
 
 export const environment = {
-  ...baseEnv, ...{
+  ...baseEnv,
+  ...{
     production: true,
 
-    backendUrl: 'http://116.203.146.153',
+    backendUrl: 'https://giorgiofederici.com:8443',
     // UIsUrl: '',
 
-    domain: '.giorgiofederici.com'
+    domain: 'giorgiofederici.com'
   }
 };
