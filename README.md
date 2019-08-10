@@ -1,27 +1,40 @@
-# GiorgiofedericiFrontend
+# Giorgio Federici Web Application (Frontend)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+A Single Page Application (SPA) developed as the web application frontend.
 
-## Development server
+# Architecture
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The SPA is created with Angular2+ (v.8) framework.
 
-## Code scaffolding
+Inspired by Redux, there is central store and a reactive state management.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The SPA is hosted on a Debian 9 VM in the [Hetzner Cloud](https://www.hetzner.com/cloud).
 
-## Build
+# CI/CD (Continuous integration/Continuous deployment)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+The CI/CD works with [Travis CI](https://travis-ci.org/).
 
-## Running unit tests
+# SSL
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+HTTPS enabled thanks to [Let's Encrypt](https://letsencrypt.org/) certificate.
 
-## Running end-to-end tests
+# Scripts
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# Technologies
 
-## Further help
+- Angular2+
+- NgRx
+- TypeScript
+- Hthml/Css
+- Sass
+- Bootstrap 4
+- Angular Material
+- Fontawesome
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Author
+
+[Giorgio Federici](https://giorgiofederici.com)
+
+# License
+
+This project is licensed under the MIT License - see the LICENSE file for details
