@@ -1,12 +1,17 @@
 <div class="container mt-3">
-    <div class="row">
-        <div class="card-deck">
-            <website-portfolio-item
-                [portfolioItemImgUrl]="'assets/images/GF-logo.png'"
-                [portfolioItemTitle]="'Giorgio Federici'"
-                [portfolioItemText]="'MEAN Application'">
-            </website-portfolio-item>
-            <!--
+  <div class="row">
+    <div class="card-deck">
+      <ng-container *ngIf="projects$ | async as projects">
+        <website-portfolio-item
+          *ngFor="let project of projects"
+          [image]="project.image"
+          [name]="project.name"
+          [description]="project.description"
+          [repository]="project.repository"
+        >
+        </website-portfolio-item>
+      </ng-container>
+      <!--
             <div class="card mb-4 card-with border-warning text-moonlight text-center">
                 <a href="/">
                     <img class="card-img-top bg-taxi" src="assets/images/taxi-catania-ruggieri-2.png"
@@ -20,7 +25,7 @@
                 </a>
             </div>
             -->
-            <!--
+      <!--
             <div class="card mb-4 card-with border-warning text-moonlight text-center">
                 <a href="/">
                     <img class="card-img-top bg-taxi" src="assets/images/taxi-catania-ruggieri-2.png"
@@ -101,6 +106,6 @@
                 </div>
             </div>
             -->
-        </div>
     </div>
+  </div>
 </div>
