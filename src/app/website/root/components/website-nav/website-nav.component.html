@@ -1,31 +1,40 @@
 <nav class="navbar-expand-lg navbar-light">
-    <div class="row h-100">
-        <div class="col-3 col-md-2">
-            <a class="navbar-brand p-2 px-2" [routerLink]="['/']">
-                <img src="assets/images/monkey.png">
-            </a>
-        </div>
-        <div class="col-md-4 d-none d-md-block">
-            <website-clip-text></website-clip-text>
-        </div>
-        <div class="col-9 col-md-6 text-right">
-            <button class="navbar-toggler text-white border-white" type="button" (click)="isCollapsed = !isCollapsed"
-                [attr.aria-expanded]="!isCollapsed" aria-controls="navbar-collapse">
-                <fa-icon [icon]="['fas', 'bars']"></fa-icon>
-            </button>
+  <div class="row h-100">
+    <div class="col-3 col-md-2">
+      <a class="navbar-brand p-2 px-2" [routerLink]="['/']">
+        <img src="assets/images/monkey.png" />
+      </a>
+    </div>
+    <div class="col-md-4 d-none d-md-block">
+      <website-clip-text></website-clip-text>
+    </div>
+    <div class="col-9 col-md-6 text-right">
+      <button
+        class="navbar-toggler text-white border-white"
+        type="button"
+        (click)="isCollapsed = !isCollapsed"
+        [attr.aria-expanded]="!isCollapsed"
+        aria-controls="navbar-collapse"
+      >
+        <fa-icon [icon]="['fas', 'bars']"></fa-icon>
+      </button>
 
-            <div class="collapse navbar-collapse" id="navbar-collapse" [ngbCollapse]="isCollapsed">
-                <ul class="navbar-nav ml-auto">
-                    <website-nav-item [routerLink]="['/']">
-                        Home
-                    </website-nav-item>
-                    <website-nav-item [routerLink]="['/cv']">
-                        CV
-                    </website-nav-item>
-                    <website-nav-item [routerLink]="['/portfolio']">
-                        Portfolio
-                    </website-nav-item>
-                    <!--
+      <div
+        class="collapse navbar-collapse"
+        id="navbar-collapse"
+        [ngbCollapse]="isCollapsed"
+      >
+        <ul class="navbar-nav ml-auto">
+          <website-nav-item [routerLink]="['/']">
+            Home
+          </website-nav-item>
+          <website-nav-item [routerLink]="['/cv']">
+            CV
+          </website-nav-item>
+          <website-nav-item [routerLink]="['/projects']">
+            Projects
+          </website-nav-item>
+          <!--
                             <website-nav-item [routerLink]="['/teaching']">
                                 Teaching
                             </website-nav-item>
@@ -36,13 +45,13 @@
                                 Blog
                             </website-nav-item>
                             -->
-                    <!--
+          <!--
                     <website-nav-item [routerLink]="['/contact']">
                         Contact
                     </website-nav-item>
                     -->
-                </ul>
-            </div>
-        </div>
+        </ul>
+      </div>
     </div>
+  </div>
 </nav>
