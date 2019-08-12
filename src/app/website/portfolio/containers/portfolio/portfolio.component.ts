@@ -30,4 +30,8 @@ export class PortfolioComponent implements OnInit {
   ngOnInit() {
     this.store.dispatch(new ProjectsActions.GetAllProjects());
   }
+
+  placeholders(length: number) {
+    return Array(3 - (length % 3));
+  }
 }

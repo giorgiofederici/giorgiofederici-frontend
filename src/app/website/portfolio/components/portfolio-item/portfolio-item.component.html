@@ -1,14 +1,14 @@
-<div class="card mb-4 card-with border-warning text-moonlight text-center">
-  <a href="/">
+<div class="card mb-4 card-size border-warning text-moonlight text-center">
+  <a href="{{ project?.repository || project?.link }}" target="_blank">
     <img
       class="card-img-top bg-warning"
-      src="{{ image }}"
+      src="{{ project?.image }}"
       alt="Card image cap"
     />
     <div class="card-body">
-      <h5 class="card-title">{{ name }}</h5>
+      <h5 class="card-title">{{ project?.name }}</h5>
       <hr class="border-warning" />
-      <p class="card-text">{{ description }}</p>
+      <p class="card-text">{{ project?.description }}</p>
     </div>
   </a>
 </div>
