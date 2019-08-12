@@ -1,12 +1,13 @@
 @import "variables";
 
-.card-with {
+.card-size {
+  min-height: 30rem;
+  max-height: 30rem;
   min-width: 20rem;
   max-width: 20rem;
 }
 
 .card-img-top {
-  max-height: 318px;
   opacity: 0.95;
 }
 
@@ -32,4 +33,8 @@
   img {
     opacity: 1;
   }
+}
+
+.justify-start {
+  margin-right: auto;
 }

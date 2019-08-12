@@ -4,12 +4,14 @@
       <ng-container *ngIf="projects$ | async as projects">
         <website-portfolio-item
           *ngFor="let project of projects"
-          [image]="project.image"
-          [name]="project.name"
-          [description]="project.description"
-          [repository]="project.repository"
+          [project]="project"
         >
         </website-portfolio-item>
+        <!-- Flexbox workaround -->
+        <ng-container *ngFor="let el of placeholders(projects.length)">
+          <website-portfolio-item class="invisible" [project]="null">
+          </website-portfolio-item>
+        </ng-container>
       </ng-container>
       <!--
             <div class="card mb-4 card-with border-warning text-moonlight text-center">
