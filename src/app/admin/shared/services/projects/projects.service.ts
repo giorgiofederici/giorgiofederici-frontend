@@ -18,7 +18,9 @@ export class ProjectsService {
   constructor(private httpClient: HttpClient) {}
 
   getAllProjects(): Observable<APIResponse> {
-    return this.httpClient.get(`${environment.backendUrl}/api/v1/projects`);
+    return this.httpClient.get(
+      `${environment.backendUrl}/api/v1/projects?sort=index`
+    );
   }
 
   getProject(projectId: string): Observable<APIResponse> {
