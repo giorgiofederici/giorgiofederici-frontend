@@ -20,6 +20,8 @@ As custom VPSs are not supported by Travis CI providers, a custom deploy has bee
 
 For details, check the .travis.yml and deploy.sh files.
 
+[![Build Status](https://travis-ci.org/giorgiofederici/giorgiofederici-frontend.svg?branch=production)](https://travis-ci.org/giorgiofederici/giorgiofederici-frontend)
+
 # SSL
 
 HTTPS enabled thanks to [Let's Encrypt](https://letsencrypt.org/) certificate.
