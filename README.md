@@ -2,6 +2,10 @@
 
 A Single Page Application (SPA) developed as the web application frontend.
 
+[![Build Status](https://travis-ci.org/giorgiofederici/giorgiofederici-frontend.svg?branch=production)](https://travis-ci.org/giorgiofederici/giorgiofederici-frontend)
+[![Build Status](https://travis-ci.org/giorgiofederici/giorgiofederici-frontend.svg?branch=development)](https://travis-ci.org/giorgiofederici/giorgiofederici-frontend)
+[![Build Status](https://travis-ci.org/giorgiofederici/giorgiofederici-frontend.svg?branch=master)](https://travis-ci.org/giorgiofederici/giorgiofederici-frontend)
+
 # Architecture
 
 The SPA is created with Angular2+ (v.8) framework.
