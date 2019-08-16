@@ -8,6 +8,8 @@ before_script:
   - npm install -g @angular/cli
 script:
   - npm install
+  - ng lint
+  - npm run test-ci
 cache:
   directories:
     - node_modules

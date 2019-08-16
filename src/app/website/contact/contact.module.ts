@@ -16,25 +16,19 @@ import { faExclamation } from '@fortawesome/free-solid-svg-icons';
 import { ContactComponent } from './containers/contact/contact.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
-export const ROUTES: Routes = [
-    { path: '', component: ContactComponent }
-]
+export const ROUTES: Routes = [{ path: '', component: ContactComponent }];
 
 @NgModule({
-    imports: [
-        CommonModule,
-        RouterModule.forChild(ROUTES),
-        ReactiveFormsModule,
-        FontAwesomeModule
-    ],
-    declarations: [
-        ContactComponent,
-        ContactFormComponent
-    ]
-
+  imports: [
+    CommonModule,
+    RouterModule.forChild(ROUTES),
+    ReactiveFormsModule,
+    FontAwesomeModule
+  ],
+  declarations: [ContactComponent, ContactFormComponent]
 })
 export class ContactModule {
-    constructor() {
-        library.add(faExclamation);
-    }
+  constructor() {
+    library.add(faExclamation);
+  }
 }
