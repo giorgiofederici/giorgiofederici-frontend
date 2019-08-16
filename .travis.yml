@@ -9,7 +9,7 @@ before_script:
 script:
   - npm install
   - ng lint
-  - npm run test-ci
+  - npm run test:ci
 cache:
   directories:
     - node_modules
