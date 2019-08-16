@@ -1,9 +1,9 @@
 # Giorgio Federici Web Application (Frontend)
 
-A Single Page Application (SPA) developed as the web application frontend.
-
 [![Build Status](https://travis-ci.org/giorgiofederici/giorgiofederici-frontend.svg?branch=production)](https://travis-ci.org/giorgiofederici/giorgiofederici-frontend)
 [![Coverage Status](https://coveralls.io/repos/github/giorgiofederici/giorgiofederici-frontend/badge.svg?branch=production)](https://coveralls.io/github/giorgiofederici/giorgiofederici-frontend?branch=production)
+
+A Single Page Application (SPA) developed as the web application frontend.
 
 # Architecture
 
