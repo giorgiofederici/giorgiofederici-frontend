@@ -9,6 +9,7 @@
     "ghp:cp-index": "./node_modules/.bin/shx cp ./docs/index.html ./docs/404.html",
     "ghp": "npm run ghp:build && npm run ghp:cp-index",
     "test": "ng test",
+    "test:ci": "ng test --watch=false --code-coverage && cat ./coverage/giorgiofederici-frontend/lcov.info | coveralls",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "lite-server:local": "./node_modules/.bin/lite-server -c ./bs-config.json"
@@ -54,6 +55,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
+    "coveralls": "^3.0.6",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.0.0",
@@ -61,6 +63,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-phantomjs-launcher": "^1.0.4",
     "lite-server": "^2.5.3",
     "protractor": "~5.4.0",
     "shx": "^0.3.2",
